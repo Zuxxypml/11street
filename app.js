@@ -60,11 +60,12 @@ app.get(homeRoute, (req, res) => {
     emailExists: "",
   });
 });
+let userName = "";
 app.post(homeRoute, (req, res) => {
   // Requests Values
   const firstName = req.body.firstname;
   const lastName = req.body.Lastname;
-  const userName = req.body.username;
+  userName = req.body.username;
   const email = req.body.email;
   const password = req.body.password;
   const login = req.body.login;
@@ -176,7 +177,7 @@ app.post(homeRoute, (req, res) => {
 });
 // Logged In Route
 app.get("/loggedin", (req, res) => {
-  res.render("loggedin");
+  res.render("loggedin", { user: userName });
 });
 //Port listener
 app.listen(PORT, () => {
