@@ -178,7 +178,7 @@ app.post(homeRoute, (req, res) => {
 app.get("/loggedin", (req, res) => {
   res.render("loggedin");
 });
-//Listener
+//Port listener
 app.listen(PORT, () => {
   console.log("Server started on port 8080");
 });
