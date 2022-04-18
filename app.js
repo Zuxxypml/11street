@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 // Mongo DB initialisation
 async function run() {
   await mongoose.connect(
-    "mongodb+srv://root:root@11street.tjyb0.mongodb.net/11streetDB"
+    "mongodb+srv://root:root@11street.tjyb0.mongodb.net/11streetDB?retryWrites=true&w=majority"
   );
   console.log("Database Connected ");
 }
