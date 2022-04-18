@@ -109,14 +109,14 @@ app.post(homeRoute, (req, res) => {
     // Checks If Theres a User with the requested user name
     function checkIfEmailExists() {
       // User.find({ email: email }, (err, UserFound) => {
-      // //   if (!err) {
-      // //     if (UserFound) {
-      // //       console.log(UserFound);
-      // //       UserFound.forEach((User) => {
-      // //         console.log(User.email);
-      // //       });
-      // //     }
-      // //   }
+      //   if (!err) {
+      //     if (UserFound) {
+      //       console.log(UserFound);
+      //       UserFound.forEach((User) => {
+      //         console.log(User.email);
+      //       });
+      //     }
+      //   }
       // });
       User.find({ email: email }, (err, UserFound) => {
         if (err) {
